@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Index.php
+ * Landing page for comp4711Lab1 project
+ * Creates an array of Student objects and displays them in 
+ * order of their index. 
+ */
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,11 +14,14 @@
  */
 
 include ('student.php');
+
+//init array of student objects called students
 $students = array();
 
 
 echo "hello world, its alive! ";
 
+//create some students
 
 $first = new Student();
 $first->surname = "Doe";
@@ -33,6 +43,22 @@ $second->add_grade(90);
 $second->add_grade(50);
 $students['a456'] = $second;
 
+$third = new Student();
+$third->surname = "Tekenos";
+$third->first_name = "Jessica";
+$third->add_email('home', 'jessicatekenos@gmail.com');
+$third->add_email('school', 'jtekenos@my.bcit.ca');
+$third->add_grade(97);
+$third->add_grade(88);
+$third->add_grade(67);
+$students['j514'] = $third;
+
+//sorts students
+ksort($students);
+
+//displays each student object in the array 
 foreach($students as $student) {
     echo $student->toString();
 }
+
+
