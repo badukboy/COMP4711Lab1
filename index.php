@@ -6,16 +6,16 @@
  * and open the template in the editor.
  */
 
-echo "hello world butttttttttttttts";
+echo "hello world, its alive! ";
 ?>
 <html>
     <h1>THE NUMBER 1 NOTHING</h1>
     <select>
         <option value="1">
-            Butt
+            One
         </option>
         <option value="2">
-            Buttt
+            Two
         </option>
     </select>
 </html>
